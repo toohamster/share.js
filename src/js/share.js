@@ -42,8 +42,10 @@
             initialized: false,
         };
 
-        var $globals = $.extend(true, $defaults, $options);
-
+        var $globals = $defaults;
+        for(var attr in $options){
+            $globals[attr] = $options[attr];
+        }
         var $templates = {
             qzone       : 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={{URL}}&title={{TITLE}}&desc={{DESCRIPTION}}&summary={{SUMMARY}}&site={{SOURCE}}',
             qq          : 'http://connect.qq.com/widget/shareqq/index.html?url={{URL}}&title={{TITLE}}&source={{SOURCE}}&desc={{DESCRIPTION}}',
@@ -74,9 +76,8 @@
          */
         function createIcons ($container, $data) {
             var $sites = getSites($data);
-            var $i;
 
-            for ($i in $data.mode == 'prepend' ? $sites.reverse() : $sites) {
+            for (var $i in $data.mode == 'prepend' ? $sites.reverse() : $sites) {
                 var $name = $sites[$i];
                 var $url  = makeUrl($name, $data);
                 var $link = $data.initialized ? $container.find('.icon-'+$name) : $('<a class="social-share-icon icon-'+$name+'" target="_blank"></a>');
@@ -141,11 +142,10 @@
          */
         function makeUrl ($name, $data) {
             var $template = $templates[$name];
-            var $key;
 
             $data['summary'] = $data['description'];
 
-            for($key in $data){
+            for (var $key in $data) {
                 var $camelCaseKey = $name + $key.replace(/^[a-z]/, function($str){
                     return $str.toUpperCase();
                 });
