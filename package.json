@@ -6,7 +6,8 @@
   "dependencies": {},
   "scripts": {
     "test": "npm run karma",
-    "karma": "karma start karma.conf.js"
+    "karma": "karma start karma.conf.js",
+    "karma-cov": "karma start karma.conf.cov.js"
   },
   "repository": {
     "type": "git",
