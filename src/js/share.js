@@ -9,14 +9,14 @@
      *
      * @type {Boolean}
      */
-    var isMobileScreen = $(window).width() <= 768;
+    var isMobileScreen = !!navigator.userAgent.toLowerCase().match(/applewebkit.*mobile.*/);
 
     /**
      * 是否运行在微信浏览器
      *
      * @type {Boolean}
      */
-    var runningInWeChat = navigator.userAgent.toLowerCase().match(/MicroMessenger/i) === 'micromessenger';
+    var runningInWeChat = !!navigator.userAgent.toLowerCase().match(/MicroMessenger/);
 
     /**
      * 模板配置
