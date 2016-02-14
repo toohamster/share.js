@@ -1,7 +1,7 @@
 {
-  "name": "social-share.js",
+  "name": "share.js",
   "description": "create social share buttons on your site.",
-  "version": "1.0.10",
+  "version": "0.0.1",
   "main": "dist/js/share.min.js",
   "dependencies": {},
   "scripts": {
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/overtrue/share.js.git"
+    "url": "git+https://github.com/xuexb/share.js.git"
   },
   "keywords": [
     "sns",
@@ -24,12 +24,12 @@
     "facebook",
     "google"
   ],
-  "author": "overtrue",
+  "author": "xuexb",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/overtrue/share.js/issues"
+    "url": "https://github.com/xuexb/share.js/issues"
   },
-  "homepage": "https://github.com/overtrue/share.js#readme",
+  "homepage": "https://github.com/xuexb/share.js#readme",
   "devDependencies": {
     "event-stream": "*",
     "del": "*",
