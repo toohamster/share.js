@@ -23,7 +23,6 @@
         return this.each(function () {
             var data = $(this).data();
             var $container;
-
             // 如果已经加载过
             if (data._share) {
                 return;
@@ -118,6 +117,7 @@
     $.fn.share.isWeChat = !!navigator.userAgent.toLowerCase().match(/MicroMessenger/);
 
     var $head = $(document.head);
+
     /**
      * 默认配置
      *

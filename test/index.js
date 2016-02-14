@@ -187,26 +187,26 @@ describe('share.js', function () {
         expect($div.html().indexOf('testok') !== -1).toBe(true);
     });
 
-    // it('多次调用', function () {
-    //     var flag = true;
+    it('多次调用', function () {
+        var flag = true;
 
-    //     try {
-    //         $div.share().share().share();
-    //     }
-    //     catch (e) {
-    //         flag = false;
-    //     }
+        try {
+            $div.share().share().share();
+        }
+        catch (e) {
+            flag = false;
+        }
 
-    //     expect(flag).toBe(true);
+        expect(flag).toBe(true);
 
-    //     reset();
-    //     $div.share({
-    //         sites: 'weibo'
-    //     }).share().share({
-    //         sites: 'weibo,qq, google'
-    //     });
-    //     expect($div.children().length).toBe(1);
-    // });
+        reset();
+        $div.share({
+            sites: 'weibo'
+        }).share().share({
+            sites: 'weibo,qq, google'
+        });
+        expect($div.children().length).toBe(1);
+    });
 
     // makeUrl测试
 });
