@@ -196,10 +196,16 @@
      * @return {string} 最终链接
      */
     function makeUrl(name, data) {
-        data.summary = data.description;
+        data.summary = data.description || '';
 
         return $.fn.share.templates[name].replace(/\{([^\}]+?)\}/g, function ($0, $1) {
-            return data[$1] !== undefined ? encodeURIComponent(data[$1]) : '';
+            var value = data[name + $1.substr(0, 1).toUpperCase() + $1.substr(1)];
+
+            if (value === undefined) {
+                value = data[$1];
+            }
+
+            return encodeURIComponent(value || '');
         });
     }
 

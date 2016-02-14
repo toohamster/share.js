@@ -15,19 +15,17 @@
 <body>
   <section class="page-header">
     <h1 class="project-name">Share.js</h1>
-    <h2 class="project-tagline">一键分享到微博、QQ空间、QQ好友、微信、腾讯微博、豆瓣、Facebook、Twitter、Linkedin、Google+、点点</h2>
-    <a href="https://github.com/overtrue/share.js" class="btn">View on GitHub</a>
-    <a href="https://github.com/overtrue/share.js/zipball/master" class="btn">Download .zip</a>
-    <a href="https://github.com/overtrue/share.js/tarball/master" class="btn">Download .tar.gz</a>
+    <h2 class="project-tagline">一键分享到微博、QQ空间、QQ好友、微信、腾讯微博、豆瓣、Facebook、Twitter、Linkedin、Google+、点点<br>声明：基于 <a href="http://github.com/overtrue/share.js">@overtrue/share.js</a>修改的</h2>
+    <a href="https://github.com/xuexb/share.js" class="btn">View on GitHub</a>
+    <a href="https://github.com/xuexb/share.js/zipball/master" class="btn">Download .zip</a>
+    <a href="https://github.com/xuexb/share.js/tarball/master" class="btn">Download .tar.gz</a>
   </section>
 
-<article class="main-content markdown-body entry-content" itemprop="mainContentOfPage"><h1><a id="user-content-sharejs" class="anchor" href="#sharejs" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://overtrue.me/share.js/">Share.js</a></h1>
+<article class="main-content markdown-body entry-content" itemprop="mainContentOfPage"><h1><a id="user-content-sharejs" class="anchor" href="#sharejs" aria-hidden="true"><span class="octicon octicon-link"></span></a><a href="http://github.com/xuexb/share.js">Share.js</a></h1>
 
 <p>一键分享到微博、QQ空间、QQ好友、微信、腾讯微博、豆瓣、Facebook、Twitter、Linkedin、Google+、点点等社交网站，使用字体图标。</p>
 
 <p><div class="social-share"></div></p>
-
-<p>或者直接浏览我的博客 <a href="http://overtrue.me">http://overtrue.me</a> 或者 <a href="http://laravel.so">http://laravel.so</a> 内容页查看效果。</p>
 
 <h1><a id="user-content-安装" class="anchor" href="#安装" aria-hidden="true"><span class="octicon octicon-link"></span></a>安装</h1>
 
@@ -74,7 +72,6 @@ title               <span class="pl-k">:</span> <span class="pl-s"><span class="
 description         <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>, <span class="pl-c">// 描述, 默认读取head标签：&lt;meta name="description" content="PHP弱类型的实现原理分析" /&gt;</span>
 image               <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>, <span class="pl-c">// 图片, 默认取网页中第一个img标签</span>
 sites               <span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>qzone<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>qq<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>weibo<span class="pl-pds">'</span></span>,<span class="pl-s"><span class="pl-pds">'</span>wechat<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>douban<span class="pl-pds">'</span></span>], <span class="pl-c">// 启用的站点</span>
-disabled            <span class="pl-k">:</span> [<span class="pl-s"><span class="pl-pds">'</span>google<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>facebook<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>twitter<span class="pl-pds">'</span></span>], <span class="pl-c">// 禁用的站点</span>
 wechatQrcodeTitle   <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">"</span>微信扫一扫：分享<span class="pl-pds">"</span></span>, <span class="pl-c">// 微信二维码提示文字</span>
 wechatQrcodeHelper  <span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;p&gt;微信里点“发现”，扫一下&lt;/p&gt;&lt;p&gt;二维码便可将本文分享至朋友圈。&lt;/p&gt;<span class="pl-pds">'</span></span>,</pre></div>
 
@@ -84,11 +81,11 @@ wechatQrcodeHelper  <span class="pl-k">:</span> <span class="pl-s"><span class="
 <p>驼峰转为中横线，如<code>wechatQrcodeHelper</code> 的data标签为<code>data-wechat-qrcode-helper</code></p>
 </blockquote>
 
-<h5><a id="user-content-禁用-google设置分享的描述" class="anchor" href="#禁用-google设置分享的描述" aria-hidden="true"><span class="octicon octicon-link"></span></a>禁用 google、设置分享的描述</h5>
+<h5><a class="anchor" href="#禁用-google设置分享的描述" aria-hidden="true"><span class="octicon octicon-link"></span></a>设置分享的描述</h5>
 
-<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>social-share<span class="pl-pds">"</span></span> <span class="pl-e">data-disabled</span>=<span class="pl-s"><span class="pl-pds">"</span>google<span class="pl-pds">"</span></span> <span class="pl-e">data-description</span>=<span class="pl-s"><span class="pl-pds">"</span>Share.js - 一键分享到微博，QQ空间，腾讯微博，人人，豆瓣<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>social-share<span class="pl-pds">"</span></span> <span class="pl-e">data-description</span>=<span class="pl-s"><span class="pl-pds">"</span>Share.js - 一键分享到微博，QQ空间，腾讯微博，人人，豆瓣<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
-<div class="social-share" data-disabled="google" data-description="Share.js - 一键分享到微博，QQ空间，腾讯微博，人人，豆瓣"></div>
+<div class="social-share" data-description="Share.js - 一键分享到微博，QQ空间，腾讯微博，人人，豆瓣"></div>
 
 <h5><a id="user-content-设置微信二维码标题" class="anchor" href="#设置微信二维码标题" aria-hidden="true"><span class="octicon octicon-link"></span></a>设置微信二维码标题</h5>
 
@@ -156,9 +153,10 @@ wechatQrcodeHelper  <span class="pl-k">:</span> <span class="pl-s"><span class="
 
     <footer class="site-footer">
       <span class="site-footer-owner">
-        <a href="https://github.com/overtrue/share.js">Share.js</a>
+        <a href="https://github.com/xuexb/share.js">Share.js</a>
         is maintained by
-        <a href="https://github.com/overtrue">overtrue</a>
+        <a href="http://github.com/overtrue/share.js">@overtrue/share.js</a>，
+        <a href="https://github.com/xuexb">@xuexb</a>
         .
       </span>
 
